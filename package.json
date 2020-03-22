@@ -4,7 +4,7 @@
   "description": "Verify JWT issued by Azure Active Directory B2C.",
   "keywords": [
     "azure",
-    "active directory",
+    "ad",
     "b2c",
     "jwt",
     "verify",
