@@ -1,0 +1,70 @@
+{
+  "name": "azure-ad-verify-token",
+  "version": "1.0.0",
+  "description": "Verify JWT issued by Azure Active Directory B2C.",
+  "keywords": [
+    "azure",
+    "active directory",
+    "b2c",
+    "jwt",
+    "verify",
+    "token"
+  ],
+  "author": {
+    "name": "Justin Lettau",
+    "email": "me@justinlettau.com",
+    "url": "https://justinlettau.com"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/justinlettau/azure-ad-verify-token",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/justinlettau/azure-ad-verify-token"
+  },
+  "bugs": {
+    "url": "https://github.com/justinlettau/azure-ad-verify-token/issues"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "lint": "tslint -c ./tslint.json -p ./tsconfig.json",
+    "build": "tsc -p ./tsconfig.json",
+    "prepublishOnly": "npm run build",
+    "release": "standard-version",
+    "test": "nyc jasmine JASMINE_CONFIG_PATH=jasmine.json",
+    "posttest": "nyc report --reporter=json && codecov -f coverage/*.json",
+    "format": "prettier --write **/*.{js,ts}"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
+  "devDependencies": {
+    "@justinlettau/renovate-config": "^0.1.2",
+    "@justinlettau/tslint-config": "^0.1.0",
+    "@types/jasmine": "^3.5.9",
+    "@types/jsonwebtoken": "^8.3.8",
+    "@types/node-fetch": "^2.5.5",
+    "codecov": "^3.6.5",
+    "husky": "^4.2.3",
+    "jasmine": "^3.5.0",
+    "nock": "^12.0.3",
+    "nyc": "^15.0.0",
+    "prettier": "^1.19.1",
+    "pretty-quick": "^2.0.1",
+    "standard-version": "^7.1.0",
+    "ts-node": "^8.7.0",
+    "tslint": "^6.1.0",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "jsonwebtoken": "^8.5.1",
+    "node-fetch": "^2.6.0",
+    "rsa-pem-from-mod-exp": "^0.8.4"
+  }
+}
