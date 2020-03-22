@@ -1,10 +1,10 @@
 /// <reference types="./typings" />
 import nock from 'nock';
 
-import { verify } from '.';
 import { jsonWebKey } from '../testing/mock-json-web-key';
 import { encoded, payload } from '../testing/mock-token';
 import { VerifyConfig } from './interfaces';
+import { verify } from './verify';
 
 describe('verify method', () => {
   let config: VerifyConfig;

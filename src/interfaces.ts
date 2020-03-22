@@ -8,16 +8,16 @@ export interface VerifyConfig {
 }
 
 /**
- * Azure `jwks_uri` response.
+ * Azure json web key set.
  */
-export interface AzureJwksUri {
-  keys: AzureJwksUriKey[];
+export interface AzureJwks {
+  keys: AzureJwk[];
 }
 
 /**
- * Azure `jwks_uri` response key.
+ * Azure json web key.
  */
-export interface AzureJwksUriKey {
+export interface AzureJwk {
   kid: string;
   nbf: number;
   use: string;

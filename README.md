@@ -30,17 +30,16 @@ npm install azure-ad-verify-token --save
 
 # Usage
 
-```js
-import * as advt from 'azure-ad-verify-token';
+```ts
+import { verify, VerifyConfig } from 'azure-ad-verify-token';
 
-const config = {
+const config: VerifyConfig = {
   jwksUri: 'https://contoso.b2clogin.com/contoso.onmicrosoft.com/discovery/v2.0/keys?p=b2c_1_signupsignin1',
   issuer: 'https://contoso.b2clogin.com/3285c484-dce5-4abb-a341-bbe4f2bc8554/v2.0/',
   audience: '99d1275c-e805-483f-b832-600f8130829c'
 };
 
-advt
-  .verify(token, config)
+verify(token, config)
   .then(decoded => {
     // verified and decoded token
     console.log(decoded);
@@ -57,11 +56,11 @@ Configuration options:
 | ---------- | -------- | ----------------------------------------------------------- |
 | `jwksUri`  | `string` | `jwk_uri` value obtained from B2C policy metadata endpoint. |
 | `issuer`   | `string` | `issuer` value obtained from B2C policy metadata endpoint.  |
-| `audience` | `string` | Client ID of the application accessing the tenant.          |
+| `audience` | `string` | Application ID of the application accessing the tenant.     |
 
-B2C policy metadata endpoint example:
-
-`https://contoso.b2clogin.com/contoso.onmicrosoft.com/v2.0/.well-known/openid-configuration?p=b2c_1_signupsignin1`
+Example metadata endpoints:
+- https://login.microsoftonline.com/common/.well-known/openid-configuration
+- https://login.microsoftonline.com/common/discovery/keys
 
 # References
 
