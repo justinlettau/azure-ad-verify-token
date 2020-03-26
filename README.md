@@ -1,7 +1,7 @@
 [![NPM Version](https://badge.fury.io/js/azure-ad-verify-token.svg)](https://badge.fury.io/js/azure-ad-verify-token)
 ![CI](https://github.com/justinlettau/azure-ad-verify-token/workflows/CI/badge.svg)
 [![Dependency Status](https://david-dm.org/justinlettau/azure-ad-verify-token.svg)](https://david-dm.org/justinlettau/azure-ad-verify-token)
-[![Dev Dependency Status](https://david-dm.org/justinlettau/azure-ad-verify-token/dev-status.svg)](https://david-dm.org/justinlettau/js-rules-engine?type=dev)
+[![Dev Dependency Status](https://david-dm.org/justinlettau/azure-ad-verify-token/dev-status.svg)](https://david-dm.org/justinlettau/zure-ad-verify-token?type=dev)
 [![Codecov](https://codecov.io/gh/justinlettau/azure-ad-verify-token/branch/master/graph/badge.svg)](https://codecov.io/gh/justinlettau/azure-ad-verify-token)
 
 # Azure AD Verify Token
@@ -21,6 +21,7 @@ Verify JWT issued by Azure Active Directory B2C.
 - 🎉 **Verify JWT** issued by Azure Active Directory B2C.
 - 🚀 Automatically use the **rotated public keys** from Azure.
 - 💪 Written in **TypeScript**.
+- ♻️ **Configurable cache** for public keys.
 
 # Installation
 
@@ -30,16 +31,18 @@ npm install azure-ad-verify-token --save
 
 # Usage
 
-```ts
-import { verify, VerifyConfig } from 'azure-ad-verify-token';
+### Verify
 
-const config: VerifyConfig = {
+```ts
+import { verify, VerifyOptions } from 'azure-ad-verify-token';
+
+const options: VerifyOptions = {
   jwksUri: 'https://contoso.b2clogin.com/contoso.onmicrosoft.com/discovery/v2.0/keys?p=b2c_1_signupsignin1',
   issuer: 'https://contoso.b2clogin.com/3285c484-dce5-4abb-a341-bbe4f2bc8554/v2.0/',
   audience: '99d1275c-e805-483f-b832-600f8130829c'
 };
 
-verify(token, config)
+verify(token, options)
   .then(decoded => {
     // verified and decoded token
     console.log(decoded);
@@ -50,7 +53,7 @@ verify(token, config)
   });
 ```
 
-Configuration options:
+Verify options:
 
 | Property   | Type     | Description                                                 |
 | ---------- | -------- | ----------------------------------------------------------- |
@@ -59,8 +62,25 @@ Configuration options:
 | `audience` | `string` | Application ID of the application accessing the tenant.     |
 
 Example metadata endpoints:
+
 - https://login.microsoftonline.com/common/.well-known/openid-configuration
 - https://login.microsoftonline.com/common/discovery/keys
+
+### Configuration
+
+```ts
+import { setConfig } from 'azure-ad-verify-token';
+
+setConfig({
+  cacheLifetime: 12 * (60 * 60 * 1000) // 12 hours
+});
+```
+
+Configuration options:
+
+| Property        | Type     | Description                                  | Default |
+| --------------- | -------- | -------------------------------------------- | ------- |
+| `cacheLifetime` | `number` | Number of milliseconds to cache public keys. | 1 hour  |
 
 # References
 

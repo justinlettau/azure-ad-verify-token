@@ -2,12 +2,8 @@ import jwt from 'jsonwebtoken';
 import fetch from 'node-fetch';
 import getPem from 'rsa-pem-from-mod-exp';
 
-import { AzureJwks, VerifyConfig } from './interfaces';
-
-/**
- * Public key cache.
- */
-const cache = new Map<string, string>();
+import { getItem, setItem } from './cache';
+import { AzureJwks, VerifyOptions } from './interfaces';
 
 /**
  * Get public key.
@@ -16,26 +12,26 @@ const cache = new Map<string, string>();
  * @param kid Public key to get.
  */
 function getPublicKey(jwksUri: string, kid: string) {
-  let publicKey = cache.get(kid);
+  let item = getItem(kid);
 
-  if (publicKey) {
-    return Promise.resolve(publicKey);
+  if (item) {
+    return Promise.resolve(item.value);
   }
 
   return fetch(jwksUri)
     .then<AzureJwks>(res => res.json())
     .then(res => {
-      res.keys.forEach(item => {
-        cache.set(item.kid, getPem(item.n, item.e));
+      res.keys.forEach(key => {
+        setItem(key.kid, getPem(key.n, key.e));
       });
 
-      publicKey = cache.get(kid);
+      item = getItem(kid);
 
-      if (!publicKey) {
+      if (!item) {
         throw new Error('Could not find public key');
       }
 
-      return publicKey;
+      return item.value;
     });
 }
 
@@ -43,10 +39,10 @@ function getPublicKey(jwksUri: string, kid: string) {
  * Verify token.
  *
  * @param token Token to verify.
- * @param config Configuration options.
+ * @param options Configuration options.
  */
-export function verify(token: string, config: VerifyConfig) {
-  const { jwksUri, audience, issuer } = config;
+export function verify(token: string, options: VerifyOptions) {
+  const { jwksUri, audience, issuer } = options;
   let decoded: { [key: string]: any; };
   let kid: string;
 

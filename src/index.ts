@@ -1,2 +1,3 @@
-export * from './verify';
-export { VerifyConfig } from './interfaces';
+export { getConfig, setConfig } from './config';
+export { verify } from './verify';
+export { Config, VerifyOptions } from './interfaces';
