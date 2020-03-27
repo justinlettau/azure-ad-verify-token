@@ -39,7 +39,7 @@ function getPublicKey(jwksUri: string, kid: string) {
       item = getItem(kid);
 
       if (!item) {
-        throw new Error('Could not find public key');
+        throw new Error('public key not found');
       }
 
       return item.result;
@@ -61,7 +61,7 @@ export function verify(token: string, options: VerifyOptions) {
     decoded = jwt.decode(token, { complete: true, json: true });
     kid = decoded.header.kid;
   } catch (error) {
-    return Promise.reject(error);
+    return Promise.reject('invalid token');
   }
 
   return getPublicKey(jwksUri, kid)
