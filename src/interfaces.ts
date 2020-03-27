@@ -36,9 +36,14 @@ export interface VerifyOptions {
 export interface CacheItem {
 
   /**
-   * RSA public key.
+   * RSA public key result.
    */
-  value: string;
+  result: Promise<string>;
+
+  /**
+   * Resolve function from `value`'s promise.
+   */
+  done?: (value: string) => void;
 
   /**
    * Date, in milliseconds, the cache will be considered expired.

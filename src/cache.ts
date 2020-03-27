@@ -7,15 +7,43 @@ import { CacheItem } from './interfaces';
 const cache = new Map<string, CacheItem>();
 
 /**
+ * Get expiry.
+ */
+function getExpiry() {
+  const now = new Date().getTime();
+  const config = getConfig();
+
+  return now + config.cacheLifetime;
+}
+
+/**
  * Set cache item.
  *
  * @param key Cache item key.
- * @param value Public key value.
+ * @param value Cache item value.
  */
 export function setItem(key: string, value: string) {
   return cache.set(key, {
-    value,
-    expiry: new Date().getTime() + getConfig().cacheLifetime
+    result: Promise.resolve(value),
+    expiry: getExpiry()
+  });
+}
+
+/**
+ * Set deferred cache item.
+ *
+ * @param key Cache item key.
+ */
+export function setDeferredItem(key: string) {
+  let done: (value: string) => void;
+  const result = new Promise<string>(resolve => {
+    done = resolve;
+  });
+
+  return cache.set(key, {
+    result,
+    done,
+    expiry: getExpiry()
   });
 }
 
