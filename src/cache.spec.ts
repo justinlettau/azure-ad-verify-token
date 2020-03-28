@@ -25,7 +25,7 @@ describe('cache', () => {
     });
 
     it('should return null when item is expired', () => {
-      setConfig({ cacheLifetime: -1000 })
+      setConfig({ cacheLifetime: -1000 });
       setItem('expired', 'top-secret');
       const result = getItem('expired');
 

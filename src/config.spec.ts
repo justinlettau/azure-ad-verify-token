@@ -10,7 +10,7 @@ describe('config', () => {
       const result = getConfig();
 
       expect(result).toEqual({
-        cacheLifetime: DEFAULT_CACHE_LIFETIME
+        cacheLifetime: DEFAULT_CACHE_LIFETIME,
       });
     });
   });
@@ -18,11 +18,11 @@ describe('config', () => {
   describe('setConfig method', () => {
     it('should return current config', () => {
       const result = setConfig({
-        cacheLifetime: 0
+        cacheLifetime: 0,
       });
 
       expect(result).toEqual({
-        cacheLifetime: 0
+        cacheLifetime: 0,
       });
     });
   });

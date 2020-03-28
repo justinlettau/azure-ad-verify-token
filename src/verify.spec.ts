@@ -15,7 +15,7 @@ describe('verify method', () => {
     options = {
       jwksUri: 'https://login.microsoftonline.com/common/discovery/v2.0/keys',
       issuer: 'https://login.microsoftonline.com/{tenantid}/v2.0',
-      audience: '6e74172b-be56-4843-9ff4-e66a39bb12e3'
+      audience: '6e74172b-be56-4843-9ff4-e66a39bb12e3',
     };
   });
 

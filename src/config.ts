@@ -3,13 +3,13 @@ import { Config } from './interfaces';
 /**
  * Default value for `cacheLifetime`.
  */
-export const DEFAULT_CACHE_LIFETIME = 60 * 60 * 1000 // one hour
+export const DEFAULT_CACHE_LIFETIME = 60 * 60 * 1000; // one hour
 
 /**
  * Current configuration.
  */
 let config: Config = {
-  cacheLifetime: DEFAULT_CACHE_LIFETIME
+  cacheLifetime: DEFAULT_CACHE_LIFETIME,
 };
 
 /**
@@ -33,6 +33,6 @@ export function getConfig() {
  */
 export function resetConfig() {
   config = {
-    cacheLifetime: DEFAULT_CACHE_LIFETIME
+    cacheLifetime: DEFAULT_CACHE_LIFETIME,
   };
 }

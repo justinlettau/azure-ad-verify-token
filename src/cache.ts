@@ -25,7 +25,7 @@ function getExpiry() {
 export function setItem(key: string, value: string) {
   return cache.set(key, {
     result: Promise.resolve(value),
-    expiry: getExpiry()
+    expiry: getExpiry(),
   });
 }
 
@@ -36,14 +36,14 @@ export function setItem(key: string, value: string) {
  */
 export function setDeferredItem(key: string) {
   let done: (value: string) => void;
-  const result = new Promise<string>(resolve => {
+  const result = new Promise<string>((resolve) => {
     done = resolve;
   });
 
   return cache.set(key, {
     result,
     done,
-    expiry: getExpiry()
+    expiry: getExpiry(),
   });
 }
 

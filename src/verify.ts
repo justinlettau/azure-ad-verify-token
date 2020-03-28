@@ -22,9 +22,9 @@ function getPublicKey(jwksUri: string, kid: string) {
   setDeferredItem(kid);
 
   return fetch(jwksUri)
-    .then<AzureJwks>(res => res.json())
-    .then(res => {
-      res.keys.forEach(key => {
+    .then<AzureJwks>((res) => res.json())
+    .then((res) => {
+      res.keys.forEach((key) => {
         const existing = getItem(key.kid);
         const pem: string = getPem(key.n, key.e);
 
@@ -54,7 +54,7 @@ function getPublicKey(jwksUri: string, kid: string) {
  */
 export function verify(token: string, options: VerifyOptions) {
   const { jwksUri, audience, issuer } = options;
-  let decoded: { [key: string]: any; };
+  let decoded: { [key: string]: any };
   let kid: string;
 
   try {
@@ -64,10 +64,11 @@ export function verify(token: string, options: VerifyOptions) {
     return Promise.reject('invalid token');
   }
 
-  return getPublicKey(jwksUri, kid)
-    .then(key => jwt.verify(token, key, {
+  return getPublicKey(jwksUri, kid).then((key) =>
+    jwt.verify(token, key, {
       algorithms: ['RS256'],
       audience,
-      issuer
-    }));
-};
+      issuer,
+    })
+  );
+}

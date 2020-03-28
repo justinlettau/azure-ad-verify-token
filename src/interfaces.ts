@@ -2,7 +2,6 @@
  * Configuration options.
  */
 export interface Config {
-
   /**
    * Number of milliseconds to cache public keys. Default: 1 hour
    */
@@ -13,7 +12,6 @@ export interface Config {
  * Verify options.
  */
 export interface VerifyOptions {
-
   /**
    * `jwk_uri` value obtained from B2C policy metadata endpoint.
    */
@@ -34,7 +32,6 @@ export interface VerifyOptions {
  * Public key cache item.
  */
 export interface CacheItem {
-
   /**
    * RSA public key result.
    */
