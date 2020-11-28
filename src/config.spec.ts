@@ -1,4 +1,9 @@
-import { DEFAULT_CACHE_LIFETIME, getConfig, resetConfig, setConfig } from './config';
+import {
+  DEFAULT_CACHE_LIFETIME,
+  getConfig,
+  resetConfig,
+  setConfig,
+} from './config';
 
 describe('config', () => {
   afterEach(() => {

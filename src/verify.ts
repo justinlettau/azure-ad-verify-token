@@ -54,6 +54,7 @@ function getPublicKey(jwksUri: string, kid: string) {
  */
 export function verify(token: string, options: VerifyOptions) {
   const { jwksUri, audience, issuer } = options;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   let decoded: { [key: string]: any };
   let kid: string;
 

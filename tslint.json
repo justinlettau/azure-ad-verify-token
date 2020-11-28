@@ -1,3 +1,0 @@
-{
-  "extends": ["@justinlettau/tslint-config", "tslint-config-prettier"]
-}

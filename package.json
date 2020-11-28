@@ -30,12 +30,11 @@
     "dist"
   ],
   "scripts": {
-    "lint": "tslint -c ./tslint.json -p ./tsconfig.json",
+    "lint": "eslint . --ext .js,.ts",
+    "test": "jest",
     "build": "tsc -p ./tsconfig.json",
     "prepublishOnly": "npm run build",
     "release": "standard-version",
-    "test": "nyc jasmine JASMINE_CONFIG_PATH=jasmine.json",
-    "posttest": "nyc report --reporter=json && codecov -f coverage/*.json",
     "format": "prettier --write **/*.{js,ts}"
   },
   "husky": {
@@ -45,21 +44,21 @@
   },
   "devDependencies": {
     "@justinlettau/renovate-config": "^0.1.2",
-    "@justinlettau/tslint-config": "^0.1.0",
-    "@types/jasmine": "^3.5.10",
+    "@types/jest": "^26.0.15",
     "@types/jsonwebtoken": "^8.3.8",
     "@types/node-fetch": "^2.5.5",
-    "codecov": "^3.6.5",
+    "@typescript-eslint/eslint-plugin": "^4.8.2",
+    "@typescript-eslint/parser": "^4.8.2",
+    "eslint": "^7.14.0",
+    "eslint-config-prettier": "^6.15.0",
     "husky": "^4.2.3",
-    "jasmine": "^3.5.0",
+    "jest": "^26.6.3",
     "nock": "^12.0.3",
-    "nyc": "^15.0.0",
     "prettier": "^2.0.2",
     "pretty-quick": "^2.0.1",
     "standard-version": "^7.1.0",
+    "ts-jest": "^26.4.4",
     "ts-node": "^8.8.1",
-    "tslint": "^6.1.0",
-    "tslint-config-prettier": "^1.18.0",
     "typescript": "^3.8.3"
   },
   "dependencies": {

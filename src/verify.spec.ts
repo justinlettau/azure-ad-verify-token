@@ -50,6 +50,6 @@ describe('verify method', () => {
   it('should return error when token invalid', async () => {
     const result = verify('invalid_token', options);
 
-    await expectAsync(result).toBeRejected();
+    await expect(result).rejects.toBe('invalid token');
   });
 });

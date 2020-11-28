@@ -27,7 +27,9 @@ export const payload = {
   ver: '2.0',
 };
 
-const privateKey = fs.readFileSync(__dirname + '/rsa-private.pem', { encoding: 'utf8' });
+const privateKey = fs.readFileSync(__dirname + '/rsa-private.pem', {
+  encoding: 'utf8',
+});
 
 export const encoded = jwt.sign(payload, privateKey, {
   algorithm: 'RS256',
