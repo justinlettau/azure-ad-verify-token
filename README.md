@@ -37,17 +37,19 @@ npm install azure-ad-verify-token --save
 import { verify, VerifyOptions } from 'azure-ad-verify-token';
 
 const options: VerifyOptions = {
-  jwksUri: 'https://contoso.b2clogin.com/contoso.onmicrosoft.com/discovery/v2.0/keys?p=b2c_1_signupsignin1',
-  issuer: 'https://contoso.b2clogin.com/3285c484-dce5-4abb-a341-bbe4f2bc8554/v2.0/',
-  audience: '99d1275c-e805-483f-b832-600f8130829c'
+  jwksUri:
+    'https://contoso.b2clogin.com/contoso.onmicrosoft.com/discovery/v2.0/keys?p=b2c_1_signupsignin1',
+  issuer:
+    'https://contoso.b2clogin.com/3285c484-dce5-4abb-a341-bbe4f2bc8554/v2.0/',
+  audience: '99d1275c-e805-483f-b832-600f8130829c',
 };
 
 verify(token, options)
-  .then(decoded => {
+  .then((decoded) => {
     // verified and decoded token
     console.log(decoded);
   })
-  .catch(error => {
+  .catch((error) => {
     // invalid token
     console.error(decoded);
   });
@@ -72,7 +74,7 @@ Example metadata endpoints:
 import { setConfig } from 'azure-ad-verify-token';
 
 setConfig({
-  cacheLifetime: 12 * (60 * 60 * 1000) // 12 hours
+  cacheLifetime: 12 * (60 * 60 * 1000), // 12 hours
 });
 ```
 
