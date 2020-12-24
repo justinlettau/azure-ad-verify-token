@@ -51,7 +51,7 @@ verify(token, options)
   })
   .catch((error) => {
     // invalid token
-    console.error(decoded);
+    console.error(error);
   });
 ```
 
