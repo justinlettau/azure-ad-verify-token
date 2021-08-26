@@ -1,12 +1,6 @@
 import * as fs from 'fs';
 import jwt from 'jsonwebtoken';
 
-export const header = {
-  typ: 'JWT',
-  alg: 'RS256',
-  kid: 'i6lGk3FZzxRcUb2C3nEQ7syHJlY',
-};
-
 export const payload = {
   aud: '6e74172b-be56-4843-9ff4-e66a39bb12e3',
   iss: 'https://login.microsoftonline.com/{tenantid}/v2.0',
@@ -31,7 +25,19 @@ const privateKey = fs.readFileSync(__dirname + '/rsa-private.pem', {
   encoding: 'utf8',
 });
 
-export const encoded = jwt.sign(payload, privateKey, {
+export const encodedValid = jwt.sign(payload, privateKey, {
   algorithm: 'RS256',
-  header,
+  header: {
+    typ: 'JWT',
+    alg: 'RS256',
+    kid: 'i6lGk3FZzxRcUb2C3nEQ7syHJlY',
+  },
+});
+
+export const encodedWithoutKid = jwt.sign(payload, privateKey, {
+  algorithm: 'RS256',
+  header: {
+    typ: 'JWT',
+    alg: 'RS256',
+  },
 });

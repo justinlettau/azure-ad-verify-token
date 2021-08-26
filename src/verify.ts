@@ -62,7 +62,7 @@ export function verify(token: string, options: VerifyOptions) {
     decoded = jwt.decode(token, { complete: true, json: true });
     kid = decoded.header.kid;
 
-    if (!kid ) {
+    if (!kid) {
       throw new Error('kid missing from token header');
     }
   } catch (error) {

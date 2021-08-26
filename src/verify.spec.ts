@@ -2,7 +2,11 @@
 import nock from 'nock';
 
 import { jsonWebKey } from '../testing/mock-json-web-key';
-import { encoded, payload } from '../testing/mock-token';
+import {
+  encodedValid,
+  encodedWithoutKid,
+  payload,
+} from '../testing/mock-token';
 import { clear } from './cache';
 import { VerifyOptions } from './interfaces';
 import { verify } from './verify';
@@ -30,7 +34,7 @@ describe('verify method', () => {
       .once()
       .reply(200, { keys: [jsonWebKey] });
 
-    const result = await verify(encoded, options);
+    const result = await verify(encodedValid, options);
 
     expect(result).toEqual(payload);
   });
@@ -41,14 +45,20 @@ describe('verify method', () => {
       .once()
       .reply(200, { keys: [jsonWebKey] });
 
-    verify(encoded, options);
-    const result = await verify(encoded, options);
+    verify(encodedValid, options);
+    const result = await verify(encodedValid, options);
 
     expect(result).toEqual(payload);
   });
 
   it('should return error when token invalid', async () => {
     const result = verify('invalid_token', options);
+
+    await expect(result).rejects.toBe('invalid token');
+  });
+
+  it('should return error when kid is missing', async () => {
+    const result = verify(encodedWithoutKid, options);
 
     await expect(result).rejects.toBe('invalid token');
   });
