@@ -61,6 +61,9 @@ export function verify(token: string, options: VerifyOptions) {
   try {
     decoded = jwt.decode(token, { complete: true, json: true });
     kid = decoded.header.kid;
+    if (kid === undefined || !kid ) {
+      throw new Error('invalid token');
+    }
   } catch (error) {
     return Promise.reject('invalid token');
   }
