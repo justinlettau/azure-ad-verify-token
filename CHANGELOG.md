@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.2](https://github.com/justinlettau/azure-ad-verify-token/compare/v1.1.1...v1.1.2) (2021-08-27)
+
+
+### Bug Fixes
+
+* throw error when kid is not present ([#29](https://github.com/justinlettau/azure-ad-verify-token/issues/29)) ([a968886](https://github.com/justinlettau/azure-ad-verify-token/commit/a968886a6bc0ae840c1ef6a32928b312e2f9ff46))
+
 ### [1.1.1](https://github.com/justinlettau/azure-ad-verify-token/compare/v1.1.0...v1.1.1) (2020-11-28)
 
 ## [1.1.0](https://github.com/justinlettau/azure-ad-verify-token/compare/v1.0.1...v1.1.0) (2020-03-28)
