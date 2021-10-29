@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/justinlettau/azure-ad-verify-token/compare/v1.1.2...v2.0.0) (2021-10-29)
+
+
+### ⚠ BREAKING CHANGES
+
+* This package is now pure ESM
+
+### Features
+
+* esm package ([6aa4f5b](https://github.com/justinlettau/azure-ad-verify-token/commit/6aa4f5bbd5a0c8b89ab5232a61b83536eedf8105))
+
 ### [1.1.2](https://github.com/justinlettau/azure-ad-verify-token/compare/v1.1.1...v1.1.2) (2021-08-27)
 
 
