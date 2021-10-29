@@ -4,12 +4,12 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "lib": ["es6", "dom"],
-    "module": "commonjs",
+    "module": "ES2020",
     "moduleResolution": "node",
     "noImplicitAny": true,
     "outDir": "dist",
     "sourceMap": true,
-    "target": "es5"
+    "target": "ES2019"
   },
   "include": ["src/**/*.ts"],
   "exclude": ["src/**/*.spec.ts"]
