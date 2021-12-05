@@ -1,7 +1,5 @@
 [![NPM Version](https://badge.fury.io/js/azure-ad-verify-token.svg)](https://badge.fury.io/js/azure-ad-verify-token)
 ![CI](https://github.com/justinlettau/azure-ad-verify-token/workflows/CI/badge.svg)
-[![Dependency Status](https://david-dm.org/justinlettau/azure-ad-verify-token.svg)](https://david-dm.org/justinlettau/azure-ad-verify-token)
-[![Dev Dependency Status](https://david-dm.org/justinlettau/azure-ad-verify-token/dev-status.svg)](https://david-dm.org/justinlettau/zure-ad-verify-token?type=dev)
 [![Codecov](https://codecov.io/gh/justinlettau/azure-ad-verify-token/branch/master/graph/badge.svg)](https://codecov.io/gh/justinlettau/azure-ad-verify-token)
 
 # Azure AD Verify Token

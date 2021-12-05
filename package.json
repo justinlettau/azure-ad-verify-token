@@ -47,7 +47,6 @@
     }
   },
   "devDependencies": {
-    "@justinlettau/renovate-config": "^0.1.2",
     "@types/jest": "^27.0.2",
     "@types/jsonwebtoken": "^8.5.5",
     "@types/node-fetch": "^2.5.12",
