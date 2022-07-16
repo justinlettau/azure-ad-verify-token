@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.1](https://github.com/justinlettau/azure-ad-verify-token/compare/v2.0.0...v2.0.1) (2022-07-16)
+
+
+### Bug Fixes
+
+* esm imports ([6796b36](https://github.com/justinlettau/azure-ad-verify-token/commit/6796b36bbf3cda905bf18744f7f98bc09b0eafbb)), closes [#45](https://github.com/justinlettau/azure-ad-verify-token/issues/45)
+
 ## [2.0.0](https://github.com/justinlettau/azure-ad-verify-token/compare/v1.1.2...v2.0.0) (2021-10-29)
 
 
