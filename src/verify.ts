@@ -2,8 +2,8 @@ import jwt from 'jsonwebtoken';
 import fetch from 'node-fetch';
 import getPem from 'rsa-pem-from-mod-exp';
 
-import { getItem, setDeferredItem, setItem } from './cache';
-import { AzureJwks, VerifyOptions } from './interfaces';
+import { getItem, setDeferredItem, setItem } from './cache.js';
+import { AzureJwks, VerifyOptions } from './interfaces.js';
 
 /**
  * Get public key.

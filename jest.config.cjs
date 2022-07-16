@@ -3,4 +3,7 @@ module.exports = {
   testEnvironment: 'node',
   collectCoverage: true,
   roots: ['<rootDir>/src/'],
+  moduleNameMapper: {
+    '^(\\.{1,2}/.*)\\.js$': '$1',
+  },
 };

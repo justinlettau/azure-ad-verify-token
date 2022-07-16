@@ -3,7 +3,7 @@ import {
   getConfig,
   resetConfig,
   setConfig,
-} from './config';
+} from './config.js';
 
 describe('config', () => {
   afterEach(() => {

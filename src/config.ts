@@ -1,4 +1,4 @@
-import { Config } from './interfaces';
+import { Config } from './interfaces.js';
 
 /**
  * Default value for `cacheLifetime`.

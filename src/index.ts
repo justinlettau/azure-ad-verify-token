@@ -1,3 +1,3 @@
-export { getConfig, setConfig } from './config';
-export { verify } from './verify';
-export { Config, VerifyOptions } from './interfaces';
+export { getConfig, setConfig } from './config.js';
+export { verify } from './verify.js';
+export { Config, VerifyOptions } from './interfaces.js';

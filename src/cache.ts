@@ -1,5 +1,5 @@
-import { getConfig } from './config';
-import { CacheItem } from './interfaces';
+import { getConfig } from './config.js';
+import { CacheItem } from './interfaces.js';
 
 /**
  * Public key cache.

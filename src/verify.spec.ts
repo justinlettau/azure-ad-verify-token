@@ -1,15 +1,15 @@
 /// <reference types="./typings" />
 import nock from 'nock';
 
-import { jsonWebKey } from '../testing/mock-json-web-key';
+import { jsonWebKey } from '../testing/mock-json-web-key.js';
 import {
   encodedValid,
   encodedWithoutKid,
   payload,
-} from '../testing/mock-token';
-import { clear } from './cache';
-import { VerifyOptions } from './interfaces';
-import { verify } from './verify';
+} from '../testing/mock-token.js';
+import { clear } from './cache.js';
+import { VerifyOptions } from './interfaces.js';
+import { verify } from './verify.js';
 
 describe('verify method', () => {
   let options: VerifyOptions;

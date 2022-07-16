@@ -1,5 +1,5 @@
-import { clear, getItem, setItem } from './cache';
-import { resetConfig, setConfig } from './config';
+import { clear, getItem, setItem } from './cache.js';
+import { resetConfig, setConfig } from './config.js';
 
 describe('cache', () => {
   beforeEach(() => {
