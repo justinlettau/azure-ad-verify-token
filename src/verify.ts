@@ -38,7 +38,7 @@ function getPublicKey(jwksUri: string, kid: string) {
 
       item = getItem(kid);
 
-      if (!item) {
+      if (!item || !item.done) {
         throw new Error('public key not found');
       }
 
