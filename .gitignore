@@ -2,3 +2,5 @@
 coverage/
 node_modules/
 dist/
+.dccache
+.iac-data
