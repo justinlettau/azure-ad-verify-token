@@ -1,10 +1,11 @@
-[![NPM Version](https://badge.fury.io/js/azure-ad-verify-token.svg)](https://badge.fury.io/js/azure-ad-verify-token)
-![CI](https://github.com/justinlettau/azure-ad-verify-token/workflows/CI/badge.svg)
-[![Codecov](https://codecov.io/gh/justinlettau/azure-ad-verify-token/branch/master/graph/badge.svg)](https://codecov.io/gh/justinlettau/azure-ad-verify-token)
+[![npm version](https://badge.fury.io/js/@tmaguire%2Fazure-ad-verify-token.svg)](https://badge.fury.io/js/@tmaguire%2Fazure-ad-verify-token)
+![CI](https://github.com/tmaguire/azure-ad-verify-token/workflows/CI/badge.svg)
 
 # Azure AD Verify Token
 
 Verify JWT issued by Azure Active Directory B2C.
+
+> This fork is maintained by [@tmaguire](https://github.com/tmaguire) - this module was originally created by [@justinlettau](https://github.com/justinlettau).
 
 # Table of Contents
 
@@ -24,7 +25,7 @@ Verify JWT issued by Azure Active Directory B2C.
 # Installation
 
 ```bash
-npm install azure-ad-verify-token --save
+npm install @tmaguire/azure-ad-verify-token --save
 ```
 
 # Usage
@@ -32,7 +33,7 @@ npm install azure-ad-verify-token --save
 ### Verify
 
 ```ts
-import { verify, VerifyOptions } from 'azure-ad-verify-token';
+import { verify, VerifyOptions } from '@tmaguire/azure-ad-verify-token';
 
 const options: VerifyOptions = {
   jwksUri:
@@ -69,7 +70,7 @@ Example metadata endpoints:
 ### Configuration
 
 ```ts
-import { setConfig } from 'azure-ad-verify-token';
+import { setConfig } from '@tmaguire/azure-ad-verify-token';
 
 setConfig({
   cacheLifetime: 12 * (60 * 60 * 1000), // 12 hours

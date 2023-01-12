@@ -2,11 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-### [3.0.2](https://github.com/tmaguire/azure-ad-verify-token/compare/v3.0.1...v3.0.2) (2023-01-12)
+## [3.0.2](https://github.com/tmaguire/azure-ad-verify-token/compare/v3.0.1...v3.0.2) (2023-01-12)
 
-### [3.0.1](https://github.com/tmaguire/azure-ad-verify-token/compare/v2.0.1...v3.0.1) (2023-01-12)
 
-### [2.0.1](https://github.com/justinlettau/azure-ad-verify-token/compare/v2.0.0...v2.0.1) (2022-07-16)
+### Bug Fixes
+* Updated README.md to point at new package
+
+## [3.0.1](https://github.com/tmaguire/azure-ad-verify-token/compare/v2.0.1...v3.0.1) (2023-01-12)
+
+
+### ⚠ BREAKING CHANGES
+* Package being maintained by @tmaguire (separate package in NPM to allow for latest security fixes for jsonwebtoken)
+
+## [2.0.1](https://github.com/justinlettau/azure-ad-verify-token/compare/v2.0.0...v2.0.1) (2022-07-16)
 
 
 ### Bug Fixes
@@ -24,14 +32,14 @@ All notable changes to this project will be documented in this file. See [standa
 
 * esm package ([6aa4f5b](https://github.com/justinlettau/azure-ad-verify-token/commit/6aa4f5bbd5a0c8b89ab5232a61b83536eedf8105))
 
-### [1.1.2](https://github.com/justinlettau/azure-ad-verify-token/compare/v1.1.1...v1.1.2) (2021-08-27)
+## [1.1.2](https://github.com/justinlettau/azure-ad-verify-token/compare/v1.1.1...v1.1.2) (2021-08-27)
 
 
 ### Bug Fixes
 
 * throw error when kid is not present ([#29](https://github.com/justinlettau/azure-ad-verify-token/issues/29)) ([a968886](https://github.com/justinlettau/azure-ad-verify-token/commit/a968886a6bc0ae840c1ef6a32928b312e2f9ff46))
 
-### [1.1.1](https://github.com/justinlettau/azure-ad-verify-token/compare/v1.1.0...v1.1.1) (2020-11-28)
+## [1.1.1](https://github.com/justinlettau/azure-ad-verify-token/compare/v1.1.0...v1.1.1) (2020-11-28)
 
 ## [1.1.0](https://github.com/justinlettau/azure-ad-verify-token/compare/v1.0.1...v1.1.0) (2020-03-28)
 
@@ -46,7 +54,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 * update error messages ([f423e0d](https://github.com/justinlettau/azure-ad-verify-token/commit/f423e0dc3c6790ab1c214f4e7546ffa14656099d))
 
-### [1.0.1](https://github.com/justinlettau/azure-ad-verify-token/compare/v1.0.0...v1.0.1) (2020-03-22)
+## [1.0.1](https://github.com/justinlettau/azure-ad-verify-token/compare/v1.0.0...v1.0.1) (2020-03-22)
 
 
 ### Bug Fixes
