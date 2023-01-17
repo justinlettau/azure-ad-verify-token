@@ -1,5 +1,5 @@
 [![npm version](https://badge.fury.io/js/@tmaguire%2Fazure-ad-verify-token.svg)](https://badge.fury.io/js/@tmaguire%2Fazure-ad-verify-token)
-![CI](https://github.com/tmaguire/azure-ad-verify-token/workflows/CI/badge.svg)
+[![CI](https://github.com/tmaguire/azure-ad-verify-token/workflows/CI/badge.svg)(https://github.com/tmaguire/azure-ad-verify-token/actions/workflows/ci.yml)]
 [![codecov](https://codecov.io/gh/tmaguire/azure-ad-verify-token/branch/main/graph/badge.svg?token=D6Y449JK0D)](https://codecov.io/gh/tmaguire/azure-ad-verify-token)
 
 # Azure AD Verify Token
