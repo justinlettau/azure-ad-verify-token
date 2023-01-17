@@ -2,12 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-### [3.0.4](https://github.com/tmaguire/azure-ad-verify-token/compare/v3.0.3...v3.0.4) (2023-01-17)
+## [3.0.4](https://github.com/tmaguire/azure-ad-verify-token/compare/v3.0.3...v3.0.4) (2023-01-17)
+
+### Documentation changes
+* Updated project README ([dab75b2](https://github.com/tmaguire/azure-ad-verify-token/commit/dab75b26767b71bc3dae41af29e8eeb7b2e6dfe1))
+
+### Package updates
+* chore(deps-dev): bump eslint from 8.31.0 to 8.32.0 ([0adc114](https://github.com/tmaguire/azure-ad-verify-token/commit/0adc114a5475a91f321ae3686f145334ea05df4a))
+* chore(deps-dev): bump prettier from 2.8.2 to 2.8.3 ([eb85efe](https://github.com/tmaguire/azure-ad-verify-token/commit/eb85efed7180d20bfcbefc5b2b5a4d660890f836))
 
 ## [3.0.3](https://github.com/tmaguire/azure-ad-verify-token/compare/v3.0.2...v3.0.3) (2023-01-13)
 
 
-### Bug Fixes
+### Package updates
 * chore(deps-dev): bump nock from 13.2.8 to 13.3.0 ([bf320bf](https://github.com/tmaguire/azure-ad-verify-token/commit/bf320bf76429f6af1fa6bb413da1122b66921357))
 * chore(deps): bump rsa-pem-from-mod-exp from 0.8.4 to 0.8.5 ([65b19ae](https://github.com/tmaguire/azure-ad-verify-token/commit/65b19ae4534e22027e46398575d81caec27e857e))
 * chore(deps-dev): bump eslint from 8.19.0 to 8.31.0 ([4d99f86](https://github.com/tmaguire/azure-ad-verify-token/commit/4d99f86e29d108b300437b210c281606b1266fad))
@@ -22,7 +29,7 @@ All notable changes to this project will be documented in this file. See [standa
 ## [3.0.2](https://github.com/tmaguire/azure-ad-verify-token/compare/v3.0.1...v3.0.2) (2023-01-12)
 
 
-### Bug Fixes
+### Documentation changes
 * Updated README.md to point at new package
 
 ## [3.0.1](https://github.com/tmaguire/azure-ad-verify-token/compare/v2.0.1...v3.0.1) (2023-01-12)
