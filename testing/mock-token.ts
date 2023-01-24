@@ -20,7 +20,7 @@ export const payload = {
   ver: '2.0',
 };
 
-const privateKey = fs.readFileSync(__dirname + '/rsa-private.pem', {
+const privateKey = fs.readFileSync(`${__dirname}/rsa-private.pem`, {
   encoding: 'utf8',
 });
 
