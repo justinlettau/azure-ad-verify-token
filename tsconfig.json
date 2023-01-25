@@ -1,11 +1,12 @@
 {
   "compilerOptions": {
+    "allowJs": true,
     "declaration": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "lib": ["es6", "dom"],
-    "module": "ES2020",
-    "moduleResolution": "node",
+    "module": "node16",
+    "moduleResolution": "node16",
     "noImplicitAny": true,
     "outDir": "dist",
     "sourceMap": true,

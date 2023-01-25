@@ -1,4 +1,3 @@
-/// <reference types="./typings" />
 import nock from 'nock';
 
 import { jsonWebKey } from '../testing/mock-json-web-key.js';
