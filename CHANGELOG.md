@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0](https://github.com/justinlettau/azure-ad-verify-token/compare/v2.0.1...v3.0.0) (2023-01-26)
+
+
+### ⚠ BREAKING CHANGES
+
+* Major version bump for jsonwebtoken and node-fetch
+
+### Features
+
+* update dependencies ([684558b](https://github.com/justinlettau/azure-ad-verify-token/commit/684558b5bc30994fe871aa677050c546c5295de8)), closes [#49](https://github.com/justinlettau/azure-ad-verify-token/issues/49)
+
 ### [2.0.1](https://github.com/justinlettau/azure-ad-verify-token/compare/v2.0.0...v2.0.1) (2022-07-16)
 
 
