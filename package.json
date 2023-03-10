@@ -2,6 +2,7 @@
   "name": "azure-ad-verify-token",
   "version": "3.0.1",
   "description": "Verify JWT issued by Azure Active Directory B2C.",
+  "module": "commonjs",
   "keywords": [
     "azure",
     "ad",
