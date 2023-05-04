@@ -1,4 +1,4 @@
-import jwt from 'jsonwebtoken';
+import { decode as jwtDecode, verify as jwtVerify } from 'jsonwebtoken';
 import fetch from 'node-fetch';
 import getPem from 'rsa-pem-from-mod-exp';
 
@@ -59,7 +59,7 @@ export function verify(token: string, options: VerifyOptions) {
   let kid: string;
 
   try {
-    decoded = jwt.decode(token, { complete: true, json: true });
+    decoded = jwtDecode(token, { complete: true, json: true });
     kid = decoded.header.kid;
 
     if (!kid) {
@@ -70,7 +70,7 @@ export function verify(token: string, options: VerifyOptions) {
   }
 
   return getPublicKey(jwksUri, kid).then((key) =>
-    jwt.verify(token, key, {
+    jwtVerify(token, key, {
       algorithms: ['RS256'],
       audience,
       issuer,
