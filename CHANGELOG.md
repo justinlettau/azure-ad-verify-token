@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.2](https://github.com/justinlettau/azure-ad-verify-token/compare/v3.0.1...v3.0.2) (2023-06-25)
+
+
+### Bug Fixes
+
+* correcting jwt library imports ([#56](https://github.com/justinlettau/azure-ad-verify-token/issues/56)) ([f7f166b](https://github.com/justinlettau/azure-ad-verify-token/commit/f7f166b43a032abe5be034f052242cade40c9d60))
+
 ### [3.0.1](https://github.com/justinlettau/azure-ad-verify-token/compare/v3.0.0...v3.0.1) (2023-02-23)
 
 ## [3.0.0](https://github.com/justinlettau/azure-ad-verify-token/compare/v2.0.1...v3.0.0) (2023-01-26)
