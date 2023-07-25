@@ -1,9 +1,11 @@
-import { decode as jwtDecode, verify as jwtVerify } from 'jsonwebtoken';
+import jsonwebtoken from 'jsonwebtoken';
 import fetch from 'node-fetch';
 import getPem from 'rsa-pem-from-mod-exp';
 
 import { getItem, setDeferredItem, setItem } from './cache.js';
 import { AzureJwks, VerifyOptions } from './interfaces.js';
+
+const { decode: jwtDecode, verify: jwtVerify } = jsonwebtoken;
 
 /**
  * Get public key.
