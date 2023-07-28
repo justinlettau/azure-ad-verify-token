@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.3](https://github.com/justinlettau/azure-ad-verify-token/compare/v3.0.2...v3.0.3) (2023-07-28)
+
+
+### Bug Fixes
+
+* jsonwebtoken imports ([a8a7fe9](https://github.com/justinlettau/azure-ad-verify-token/commit/a8a7fe9b24f85269ee04abe5a6873d462e29a9de))
+
 ## [3.0.2](https://github.com/justinlettau/azure-ad-verify-token/compare/v3.0.1...v3.0.2) (2023-06-25)
 
 
