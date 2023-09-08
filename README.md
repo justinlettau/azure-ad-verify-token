@@ -35,11 +35,9 @@ npm install azure-ad-verify-token --save
 import { verify, VerifyOptions } from 'azure-ad-verify-token';
 
 const options: VerifyOptions = {
-  jwksUri:
-    'https://contoso.b2clogin.com/contoso.onmicrosoft.com/discovery/v2.0/keys?p=b2c_1_signupsignin1',
-  issuer:
-    'https://contoso.b2clogin.com/3285c484-dce5-4abb-a341-bbe4f2bc8554/v2.0/',
-  audience: '99d1275c-e805-483f-b832-600f8130829c',
+  jwksUri: 'https://login.microsoftonline.com/common/discovery/keys',
+  issuer: 'https://login.microsoftonline.com/<tenant_id>/v2.0',
+  audience: '<client_id>',
 };
 
 verify(token, options)
